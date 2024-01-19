@@ -11,3 +11,11 @@ class DataIngestionConfig:
     source_url: str
     local_source_file: Path
     unzip_file: Path
+
+
+@dataclass
+class DataValidationConfig:
+    root_dir: Path
+    STATS_FILE: Path
+    local_file_path: str
+    all_schema: dict

@@ -5,3 +5,8 @@ data_ingestion:
   source_url: https://github.com/deasadiqbal/mlprojrct/raw/main/data.zip
   local_source_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
+
+data_validation:
+  root_dir: artifacts/data_validation
+  local_file_path: artifacts/data_ingestion/winequality-red.csv
+  STATS_FILE: artifacts/data_validation/status.txt
