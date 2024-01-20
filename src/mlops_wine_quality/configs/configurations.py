@@ -2,17 +2,20 @@ from mlops_wine_quality.constants import *
 from mlops_wine_quality.utils.common import read_yaml, create_dirs, get_size
 from mlops_wine_quality.entity.config_entity import (DataIngestionConfig, 
                                                      DataValidationConfig,
-                                                     DataTransformationConfig)
+                                                     DataTransformationConfig,
+                                                     ModelTrainingConfig)
 
 
 
 class ConfigManger:
     def __init__(self,
             config_filepath = CONFIG_FILE_PATH,
-            schema_filepath = SCHEMA_FILE_PATH):
+            schema_filepath = SCHEMA_FILE_PATH,
+            params_filepath = PARAMS_FILE_PATH):
         
         self.config = read_yaml(config_filepath)
         self.schema = read_yaml(schema_filepath)
+        self.params = read_yaml(params_filepath)
 
         create_dirs([self.config.artifacts_root])
 
@@ -56,3 +59,21 @@ class ConfigManger:
         )
 
         return data_transformation_config
+    
+    # get model training config
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.model_training
+        target_col = self.schema.TARGET_COLUMN
+        params = self.params.Elasticnet
+
+        create_dirs([config.root_dir])
+
+        return ModelTrainingConfig(
+            root_dir= config.root_dir,
+            train_data_dir= config.train_data_dir,
+            test_data_dir= config.test_data_dir,
+            model_name= config.model_name,
+            alpha= params.alpha,
+            l1_ratio= params.l1_ratio,
+            target_col= target_col.name            
+        )

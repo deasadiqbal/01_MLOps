@@ -1,6 +1,7 @@
 from mlops_wine_quality.pipeline.data_ingestion_stage import DataIngestionStage
 from mlops_wine_quality.pipeline.data_validation_stage import DataValidationStage
 from mlops_wine_quality.pipeline.data_transformation_stage import DataTransformationStage   
+from mlops_wine_quality.pipeline.model_training_stage import ModelTrainingStage
 from mlops_wine_quality import logger
 
 
@@ -35,4 +36,13 @@ try:
     logger.info(f">>Done {STAGE_NAME}<</n")
 except Exception as e:
     logger.error(f"Error in {STAGE_NAME}: {e}")
+    raise e
+
+
+STAGE_NAME = "Model Training Stage"
+try:
+    logger.info(f">>Starting {STAGE_NAME}<</n")
+    ModelTrainingStage().main()
+    logger.info(f">>Done {STAGE_NAME}<<")
+except Exception as e:
     raise e

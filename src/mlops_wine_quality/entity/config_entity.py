@@ -13,17 +13,27 @@ class DataIngestionConfig:
     unzip_file: Path
 
 
-@dataclass
+@dataclass(frozen=True)
 class DataValidationConfig:
     root_dir: Path
     STATS_FILE: Path
     local_file_path: str
     all_schema: dict
 
-@dataclass
+@dataclass(frozen=True)
 class DataTransformationConfig:
     """
     Data transformation configuration
     """
     root_dir: Path
     data_dir: Path
+
+@dataclass(frozen=True)
+class ModelTrainingConfig:
+    root_dir: Path
+    train_data_dir: Path
+    test_data_dir: Path
+    model_name: str
+    alpha: float
+    l1_ratio: float
+    target_col: str
