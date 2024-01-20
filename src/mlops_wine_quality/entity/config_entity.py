@@ -19,3 +19,11 @@ class DataValidationConfig:
     STATS_FILE: Path
     local_file_path: str
     all_schema: dict
+
+@dataclass
+class DataTransformationConfig:
+    """
+    Data transformation configuration
+    """
+    root_dir: Path
+    data_dir: Path
