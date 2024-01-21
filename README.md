@@ -36,8 +36,10 @@ Once the app is up and running, follow these steps:
 
 Explore the predictions, assess different wines, and make informed decisions with the Wine Quality Prediction App!
 
-![Home Page](home-page.png)
-![Results](01_MLOps\images\result-page.png)
+### Home Page
+![home-page](https://github.com/deasadiqbal/01_MLOps/assets/106802579/bb3f5d63-b12f-4241-b004-5bc6c7b26d27)
+### Results
+![result-page](https://github.com/deasadiqbal/01_MLOps/assets/106802579/87fbfe69-9f3b-4783-9bc1-1db99d152669)
 
 
 ## Contributing
