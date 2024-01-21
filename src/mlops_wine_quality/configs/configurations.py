@@ -3,7 +3,8 @@ from mlops_wine_quality.utils.common import read_yaml, create_dirs, get_size
 from mlops_wine_quality.entity.config_entity import (DataIngestionConfig, 
                                                      DataValidationConfig,
                                                      DataTransformationConfig,
-                                                     ModelTrainingConfig)
+                                                     ModelTrainingConfig,
+                                                     ModelEvaluationConfig)
 
 
 
@@ -77,3 +78,22 @@ class ConfigManger:
             l1_ratio= params.l1_ratio,
             target_col= target_col.name            
         )
+    
+    # get model evaluation config
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        target_col = self.schema.TARGET_COLUMN
+        params = self.params.Elasticnet
+
+        create_dirs([config.root_dir])
+
+        configs = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_data_dir=config.test_data_dir,
+            model_dir=config.model_dir,
+            metrix_filename=config.metrix_filename,
+            all_params=params,                        
+            target_col=target_col.name,
+            mlflow_uri="https://dagshub.com/deasadiqbal/01_MLOps.mlflow"
+        )
+        return configs
