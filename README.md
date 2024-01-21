@@ -39,6 +39,7 @@ Explore the predictions, assess different wines, and make informed decisions wit
 ### Home Page
 ![home-page](https://github.com/deasadiqbal/01_MLOps/assets/106802579/bb3f5d63-b12f-4241-b004-5bc6c7b26d27)
 ### Results
+![result-page](https://github.com/deasadiqbal/01_MLOps/assets/106802579/87fbfe69-9f3b-4783-9bc1-1db99d152669)
 
 
 ## Contributing
