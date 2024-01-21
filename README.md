@@ -1,8 +1,19 @@
-# 01_MLOpsdagshub rui: (
+# Wine Quality Prediction App
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/deasadiqbal/01_MLOps.mlflow \
-export MLFLOW_TRACKING_USERNAME=deasadiqbal \
-export MLFLOW_TRACKING_PASSWORD=56b8918094b5da7d4d487c082b35b97b710ede54 \
-export python script.py
+## Description
+This project is a wine quality prediction app. It is designed to predict the quality of wines based on various features and characteristics. The app utilizes machine learning algorithms to analyze the input data and provide accurate predictions. With this app, users can easily assess the quality of different wines and make informed decisions. 
 
-)
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+
+## Installation
+
+Get started with the Wine Quality Prediction App by following these simple steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/deasadiqbal/01_MLOps.git
+   ```
+
