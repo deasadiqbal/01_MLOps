@@ -53,7 +53,7 @@ Explore the predictions, assess different wines, and make informed decisions wit
 ![home-page](https://github.com/deasadiqbal/01_MLOps/assets/106802579/bb3f5d63-b12f-4241-b004-5bc6c7b26d27)
 ### Results
 ![result-page](https://github.com/deasadiqbal/01_MLOps/assets/106802579/87fbfe69-9f3b-4783-9bc1-1db99d152669)
-![test](https://github.com/krishnaik06/Kidney-Disease-Classification-Deep-Learning-Project/assets/106802579/8f3b7548-0bef-4543-8799-ef4f5408cc7d)
+
 
 
 ## Contributing
