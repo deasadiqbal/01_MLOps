@@ -11,3 +11,23 @@ types-pyYAML
 Flask
 Flask-Cors
 -e .
+
+
+
+pandas 
+dvc
+mlflow
+
+numpy
+
+python-box
+pyYAML
+tqdm
+ensure
+joblib
+types-PyYAML
+
+Flask
+Flask-Cors
+gdown
+-e .
