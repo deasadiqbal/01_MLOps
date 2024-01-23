@@ -15,17 +15,30 @@ Get started with the Wine Quality Prediction App by following these simple steps
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/deasadiqbal/01_MLOps.git
+   https://github.com/deasadiqbal/01_MLOps
    ```
-    ``` bash 
-    cd 01_MLOps
-    ```
-    ``` bash 
-    pip install -r requirements.txt
-    ```
-    ```bash
-    python app.py
-    ```
+
+### STEP 01- Create a conda environment after opening the repository
+
+```bash
+conda create -n mlenv python=3.8 -y
+```
+
+```bash
+conda activate mlenv
+```
+
+
+### STEP 02- install the requirements
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+# Finally run the following command
+python app.py
+```
+
 
 2. **Usage**
 Once the app is up and running, follow these steps:
